@@ -3,6 +3,7 @@ import Galleria from "./Galleria";
 import  Container  from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Carousel, CarouselItem } from "react-bootstrap";
 
 class FilmList extends Component{
   state ={
@@ -11,16 +12,16 @@ class FilmList extends Component{
   
 render(){
 return(
-    <>
+
     
            
-    <Col className="fit_content m-1 px-0" xs={12} md={6} lg={2} key={this.props.film._id}>
+    <Col className="img-fluid m-1" key={this.props.film._id}>
     <img id="copertina"  src={this.props.film.Poster} />
    </Col>
-           
+      
                    
                       
-     </>
+     
                
     
 
