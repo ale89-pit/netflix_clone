@@ -2,15 +2,14 @@
 
 
 
-
-
-
-
-
 #copertina{
-  width: 150px;
+  width: 100%;
   max-width: fit-content;
 }
+
+
+
+
 .fit_content{
   max-width: fit-content!important;
 }
@@ -29,4 +28,7 @@ color:white !important;
 }
 a:link{
   color:white;
+}
+.nav-item .dropdown-menu {
+  background: #000000;
 }

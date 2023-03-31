@@ -11,7 +11,7 @@ class NavBarNet extends Component {
   render() {
     return (
       <>
- <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+ <Navbar collapseOnSelect expand="lg"  variant="dark">
       <Container>
         <Navbar.Brand href="#home"><img src="./assets/img/netflix_logo.png" id="logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -36,7 +36,7 @@ class NavBarNet extends Component {
   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
 </svg>
             </Nav.Link>
-            <NavDropdown title="User" id="collasible-nav-dropdown">
+            <NavDropdown bg="dark" title="User" id="collasible-nav-dropdown">
             <img className="imgKids" src="./assets/img/avatar.png" />
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
