@@ -45,7 +45,7 @@ function App() {
           </Col>
         </Row>
 
-        <Galleria query="lord+of+the+ring" name="Lord of the Ring" />
+        <Galleria query="Naruto" name="Naruto" />
         <Galleria query="harry+potter" name="Harry Potter" />
         <Galleria query="star+wars" name="Star Wars" />
       </Container>

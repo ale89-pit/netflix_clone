@@ -68,9 +68,9 @@ class Galleria extends Component {
                 </Spinner>
             </div>
         )}
-        <h2 className="text-light mt-2 mb-2 b mx-4">{this.props.name} saga:</h2>
+        <h2 className="text-light mt-2 mb-2 b mx-4">{this.props.name}</h2>
         
-        <Carousel className="mx-4" responsive={this.responsive} infinite={true}>
+        <Carousel className="mx-4 visibility" responsive={this.responsive} infinite={true}>
            
         {
                     this.state.arrayFilm.map((film)=><FilmList film={film}></FilmList>)
