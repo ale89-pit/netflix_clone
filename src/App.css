@@ -37,6 +37,7 @@ color:white !important;
 }
 a:link{
   color:white;
+  text-decoration: none;
 }
 .nav-item .dropdown-menu {
   background: #000000;
