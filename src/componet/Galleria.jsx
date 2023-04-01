@@ -4,10 +4,12 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import FilmList from "./FilmList";
 import "react-multi-carousel/lib/styles.css";
+import { Spinner } from "react-bootstrap";
 
 class Galleria extends Component {
     state = {
-        arrayFilm: []
+        arrayFilm: [],
+        isLoading:true,
     }
     responsive = {
         xl: {
@@ -35,13 +37,19 @@ class Galleria extends Component {
                 console.log(data.Search)
                 this.setState({
                     arrayFilm: data.Search,
-
+                    isLoading:false,
                 })
             } else {
                 console.log('Errore nella chiamata')
+                this.setState({
+                    isLoading: false,
+                })
             }
         } catch (error) {
-
+            console.log(error)
+            this.setState({
+                isLoading:false
+            })
         }
     }
     componentDidMount() {
@@ -53,6 +61,13 @@ class Galleria extends Component {
     render() {
         return (
     <>
+        {this.state.isLoading &&(
+            <div className="text-center">
+                <Spinner animation="border" role="status" variant="danger">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+            </div>
+        )}
         <h2 className="text-light mt-2 mb-2 b mx-4">{this.props.name} saga:</h2>
         
         <Carousel className="mx-4" responsive={this.responsive} infinite={true}>
