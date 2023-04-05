@@ -35,10 +35,13 @@ class Galleria extends Component {
             if (response.ok) {
                 let data = await response.json()
                 console.log(data.Search)
+
                 this.setState({
                     arrayFilm: data.Search,
                     isLoading:false,
+                    
                 })
+                console.log(this.state.arrayFilm)
             } else {
                 console.log('Errore nella chiamata')
                 this.setState({
@@ -73,7 +76,7 @@ class Galleria extends Component {
         <Carousel className="mx-4 visibility" responsive={this.responsive} infinite={true}>
            
         {
-                    this.state.arrayFilm.map((film)=><FilmList film={film}></FilmList>)
+                    this.state.arrayFilm.map((film)=><FilmList  key={film._id} film={film}></FilmList>)
                 
             }
             
