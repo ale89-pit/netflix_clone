@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Col, Container, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Col, Container, } from "react-bootstrap";
 import Row from 'react-bootstrap/Row'
 
 class Footer extends Component{
